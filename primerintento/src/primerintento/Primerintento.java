@@ -61,10 +61,10 @@ public class Primerintento {
            System.out.println("el numero es mayor que los decimales");
         }
         
-        /* Ejercicio guia teorica: Implementar un programa
+        /* Ejercicio guia teorica de función if/else: Implementar un programa
         que le pida dos números enteros al usuario y determine
         si ambos o alguno de ellos es mayor a 25. */
-        Scanner leer = new Scanner(System.in);
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
         int num3, num4;
         
         System.out.println("Ingrese un numero entero");
@@ -83,7 +83,7 @@ public class Primerintento {
             System.out.println("Ninguno de los números ingresados superan el 25");
         }
         
-        /* Proximo ejercicio teoria */
+        /* Proximo ejercicio teoria de función switch */
         
         int tipoMotor;
         
@@ -106,7 +106,71 @@ public class Primerintento {
             default:
                 System.out.println("No existe un valor válido para tipo de bomba");
         }
-    
+        /* ejercicio de while */
+        System.out.println("Ingrese una nota");
+        int resp = leer.nextInt();                
+        int n1 = 0;
+        int n2 = 10;        
+        while ((resp < n1) || (resp > n2) ){
+            
+            System.out.println("Su nota esta fuera de los paremetros ingrese una nueva");
+            resp = leer.nextInt();
+        }
+        System.out.println("Su nota esta dentro de los parametros");
+        /*System.out.println("Ingrese un número limite");
+        int limite = leer.nextInt();
+        int num5 = 0;
+        int sum = num5;
+        while (sum < limite){
+            System.out.println("Ingresa un número");
+            num5 = leer.nextInt();
+            sum += num5;
+        }
+        System.out.println("La suma supero el limite, y es" + sum);*/       
+       /*ES LO MISMO SI SACAMOS EL "INT NUM5" E INICIALIZAMOS LA "SUM" EN 0
+        Y QUE LA SUMA DEL BUCLE VAYA GUARDANDO LA INFO DE LOS NUM INGRESADOS PARA SUMAR
+        System.out.println("Ingrese un número limite");
+        int limite = leer.nextInt();
+        int sum = 0;
+        while (sum < limite){
+            System.out.println("Ingresa un número");
+            sum += leer.nextInt();
+        }
+        System.out.println("La suma supero el limite, y es" + sum);*/
+       
+       /*ejercicio DO/WHILE */
+       	String res1;
+
+    	do {
+
+    	System.out.println("Desea continuar?");
+    	res1 = leer.next();
+
+    	} while (res1.equalsIgnoreCase("S"));
+
+
+        /*Basado en el ejemplo anteroir */
+        System.out.println("Ingrese un número limite");
+        int limite = leer.nextInt();
+        int sum = 0;
+        do{
+            System.out.println("Ingresa un número");
+            sum += leer.nextInt();
+        } while (sum < limite);
+        System.out.println("La suma supero el limite, y es" + sum);
+        
+        /*EJERCICIO 9 - guia teorica*/
+        int centinela = 0;
+        int num6 = 0;
+        do{
+            System.out.println("Ingrese un número");  
+            num6 += leer.nextInt();
+            centinela += 1;
+        }while (centinela < 20);
+        System.out.println("La suma de los números es" + num6);
+        /* EJERCICIO 10 - FOR ANIDADO*/
+        System.out.println("");
+        
     }
        
     }
